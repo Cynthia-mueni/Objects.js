@@ -15,29 +15,47 @@ console.log({older})
 2
 // Write a function that takes an array of objects, where each object represents a product with a name, price,and category property.
 // The function should return an object that groups the products by their categories, with the category names as keys and the arrays of products as values.
-function gruopByCategory(product){ 
-    let product=Object.gruopBy(product,Property=>Property.category)
-    console.log(product)
-}
+
+
+
 const product=[
-    
-    {name:'Laptop'price:1200,category:'ElectronicS'},
-    {name:'Shirt'price:25,category:'clothing'},
-    {name:'Headphone'price:80,category:'Electronics'},
-    {name:'Shoes'price:60,category:'clothing'},
+    {name:'Laptop',price:1200,category:'ElectronicS'},
+    {name:'Shirt',price:25,category:'clothing'},
+    {name:'Headphone',price:80,category:'Electronics'},
+    {name:'Shoes',price:60,category:'clothing'},
 ];
-gruopByCategory(product)
 
-
-
-
-
+const groupByCategory=Object.groupBy(product,({category}) =>{
+    return category;
+})
+console.log(groupByCategory)
 
 //3Given an array of objects, where each object represents a student with a name and an array of scores,
 //write a function that returns a new array containing the names of all students whose average score is greater than or equal to 85.
-const p
+function Avarage(student){
+    student.map(student=>{
+        console.log(student)
+    
+    const studentScores=student.Scores
+    console.log(student.scores)
+        const sum=student.score.reduce((acc,curr)=>acc+curr)
+        console.log(sum)
+     const avarage=sum/studentScores.length
+     console.log(avarage)
 
+     if(avarage>=85){
+        console.log(student,name,avarage)
+     }
+})
+}
 
+const student=[
+    {name:'John',scores:[90,80,85]},
+    {name:'Jane',score:[95,92,88]},
+    {name:'Jim',score:[70,80,75]},
+    {name:'Jill',score:[85,90,84]}
+]
+console.log()
 
 
 
